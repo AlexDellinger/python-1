@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+import colors as c
+import time
+snake = '''          ,--.                      ,--.           
+  .--.--.          ,--.'|   ,---,          ,--/  /|    ,---,. 
+ /  /    '.    ,--,:  : |  '  .' \      ,---,': / '  ,'  .' | 
+|  :  /`. / ,`--.'`|  ' : /  ;    '.    :   : '/ / ,---.'   | 
+;  |  |--`  |   :  :  | |:  :       \   |   '   ,  |   |   .' 
+|  :  ;_    :   |   \ | ::  |   /\   \  '   |  /   :   :  |-, 
+ \  \    `. |   : '  '; ||  :  ' ;.   : |   ;  ;   :   |  ;/| 
+  `----.   \\'   ' ;.    ;|  |  ;/  \   \:   '   \  |   :   .' 
+  __ \  \  ||   | | \   |'  :  | \  \ ,'|   |    ' |   |  |-, 
+ /  /`--'  /'   : |  ; .'|  |  '  '--'  '   : |.  \\'   :  ;/| 
+'--'.     / |   | '`--'  |  :  :        |   | '_\.'|   |    \ 
+  `--'---'  '   : |      |  | ,'        '   : |    |   :   .' 
+            ;   |.'      `--''          ;   |,'    |   | ,'   
+            '---'                       '---'      `----'     
+'''
+print(c.clear_screen)
+
+note_length = 0.38
+
+while True:    
+    c.clear_screen()
+
+    for verse in range(5):
+
+        for badger in range(11):
+            print(c.magenta + 'Badger!' + c.reset)
+            time.sleep(note_length)
+
+        if verse < 4:
+            for mushroom in range(2):
+                print(c.base3 + 'Mushroom.' + c.reset) 
+                time.sleep(note_length * 2)
+            time.sleep(note_length)
+    
+            c.clear_screen()
+    print(c.magenta + snake)
+    time.sleep(note_length * 12)
+
